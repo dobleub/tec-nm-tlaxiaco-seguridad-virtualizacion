@@ -2,17 +2,18 @@
 
 Repositorio de Seguridad y Virtualizacion 7 US
 
+https://github.com/dobleub/tec-nm-tlaxiaco-seguridad-virtualizacion
+
+branch: [feat|fix]/EOS/practica-1<br/>
+commits: [fix|feat]: Comentario de practica 1/Actualización de practica 1
+
 ## Evaluación
 
-### Prácticas 1-5 [?]%
+### Prácticas 7-8 50%
 
-### Proyecto final [?]%
+### Proyecto final 30%
 
-### Examen [?]%
-
-### Participación [?]%
-
-### Asistencia [?]%
+### Examen 20%
 
 ## Prácticas
 
