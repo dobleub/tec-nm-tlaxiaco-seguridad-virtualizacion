@@ -2,7 +2,7 @@
 
 |Nombre:              | Fecha:    |Matrícula: |
 |---------------------|-----------|-----------|
-|Maribel Lucero Zuñga | 22/0/2024 | 21620139  |
+|Maribel Lucero Zuñga | 22/08/2024 | 21620139  |
  
 
 
