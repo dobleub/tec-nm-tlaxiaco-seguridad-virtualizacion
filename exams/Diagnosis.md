@@ -1,5 +1,9 @@
 # Evaluación de Redes y Sistemas Operativos
 
+| Nombre: | Fecha: | Matrícula: |
+|---------|--------|------------|
+|         |        |            |
+
 ## Instrucciones
 
 Responde las siguientes preguntas de manera clara y concisa. Cada sección tiene un peso específico, así que distribuye tu tiempo en consecuencia.
