@@ -29,10 +29,10 @@ Relaciona los siguientes componentes de una red con su función principal:<br>
 
 | Componente                      | Función principal |
 |---------------------------------|-------------------|
-| [ ] Servidor                    | A) Proporciona recursos a los usuarios de la red. |
-| [ ] Firewall                    | B) Protege la red de accesos no autorizados. |
-| [ ] Punto de acceso inalámbrico | C) Facilita la conectividad inalámbrica. |
-| [ ] Cable de par trenzado       | D) Transmite datos entre dispositivos de la red. |
+| [ ] Servidor                    | A) Protege la red de accesos no autorizados. |
+| [ ] Firewall                    | B) Facilita la conectividad inalámbrica. |
+| [ ] Punto de acceso inalámbrico | C) Transmite datos entre dispositivos de la red. |
+| [ ] Cable de par trenzado       | D) Proporciona recursos a los usuarios de la red. |
 
 ## Sección 2: Protocolo de Conexión TCP/IP (20%)
 
