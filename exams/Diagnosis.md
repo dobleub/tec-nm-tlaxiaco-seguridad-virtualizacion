@@ -1,8 +1,10 @@
 # Evaluación de Redes y Sistemas Operativos
 
-Nombre: Maribel Lucero Zuñga
-Fecha:22/0/2024 
-Matrícula:21620139
+|Nombre:              | Fecha:    |Matrícula: |
+|---------------------|-----------|-----------|
+|Maribel Lucero Zuñga | 22/0/2024 | 21620139  |
+ 
+
 
 ## Instrucciones
 
