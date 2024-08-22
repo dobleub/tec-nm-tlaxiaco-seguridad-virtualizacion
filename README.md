@@ -1,11 +1,14 @@
-# tec-nm-tlaxiaco-seguridad-virtualizacion
+# TecNM Tlaxiaco Seguridad y Virtualizacion
 
 Repositorio de Seguridad y Virtualizacion 7 US
 
-https://github.com/dobleub/tec-nm-tlaxiaco-seguridad-virtualizacion
+[Seguridad y Virtualizacion](https://github.com/dobleub/tec-nm-tlaxiaco-seguridad-virtualizacion)
 
 branch: [feat|fix]/EOS/practica-1<br/>
 commits: [fix|feat]: Comentario de practica 1/Actualización de practica 1
+
+feat: Nueva funcionalidad<br/>
+fix: Corrección de errores<br/>
 
 ## Evaluación
 
