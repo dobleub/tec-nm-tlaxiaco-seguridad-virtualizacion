@@ -80,6 +80,7 @@ Crear una base de datos vulnerable a inyección de código y demostrar como se p
 
 - [SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
 - [SQL Injection Cheat Sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet)
+- [SQL Labs](https://portswigger.net/web-security/all-labs#sql-injection)
 
 ## Deadline
 
