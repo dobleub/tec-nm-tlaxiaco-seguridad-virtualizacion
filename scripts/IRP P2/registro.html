@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registro </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .navbar {
+            background-color: #5cb85c;
+            padding: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .navbar button {
+            background-color: white;
+            color: #5cb85c;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .navbar button:hover {
+            background-color: #4cae4c;
+            color: white;
+        }
+        .container {
+            margin-top: 60px; /* Espacio para la barra de navegación */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+        }
+        .form-wrapper {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px; /* Ajusta el ancho máximo */
+            width: 100%; /* Asegura que el contenedor sea responsive */
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+        .message {
+            text-align: center;
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        .password-strength {
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación superior -->
+    <div class="navbar">
+        <button onclick="location.href='index.html'">Index</button>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+        <div class="form-wrapper">
+            <h2>Registro</h2>
+            <form id="registerForm" action="registro.php" method="post">
+                <label for="registerUser">Usuario:</label>
+                <input type="text" id="registerUser" name="registerUser" required>
+                
+                <label for="registerPassword">Contraseña:</label>
+                <input type="password" id="registerPassword" name="registerPassword" required>
+                
+                <label for="confirmPassword">Confirmar Contraseña:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <label for="role">Rol:</label>
+                <select id="role" name="role">
+                    <option value="u">Usuario</option>
+                    <option value="a">Administrador</option>
+                </select><br>
+                
+                <div class="password-strength" id="passwordStrength"></div>
+                
+                <input type="submit" value="Registrarse">
+                <div class="message" id="message"></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const registerForm = document.getElementById('registerForm');
+        const passwordStrength = document.getElementById('passwordStrength');
+        const message = document.getElementById('message');
+
+        registerForm.addEventListener('submit', function (event) {
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                event.preventDefault();
+                message.textContent = 'Las contraseñas no coinciden.';
+                return;
+            }
+
+            if (!esContrasenaSegura(password)) {
+                event.preventDefault();
+                message.textContent = 'La contraseña no es segura.';
+            } else {
+                message.textContent = '';
+            }
+        });
+
+        function esContrasenaSegura(password) {
+            const minLength = 8;
+            const hasUpperCase = /[A-Z]/.test(password);
+            const hasLowerCase = /[a-z]/.test(password);
+            const hasNumbers = /[0-9]/.test(password);
+            const hasSpecialChars = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+            
+            return password.length >= minLength && hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChars;
+        }
+
+        document.getElementById('registerPassword').addEventListener('input', function () {
+            const password = this.value;
+
+            if (password.length < 8) {
+                passwordStrength.textContent = 'La contraseña debe tener al menos 8 caracteres.';
+            } else if (!/[A-Z]/.test(password)) {
+                passwordStrength.textContent = 'La contraseña debe tener al menos una letra mayúscula.';
+            } else if (!/[a-z]/.test(password)) {
+                passwordStrength.textContent = 'La contraseña debe tener al menos una letra minúscula.';
+            } else if (!/[0-9]/.test(password)) {
+                passwordStrength.textContent = 'La contraseña debe tener al menos un número.';
+            } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                passwordStrength.textContent = 'La contraseña debe tener al menos un carácter especial.';
+            } else {
+                passwordStrength.textContent = 'La contraseña es segura.';
+            }
+        });
+    </script>
+    
+</body>
+</html>
